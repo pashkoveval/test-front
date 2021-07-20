@@ -1,0 +1,110 @@
+.advantages {
+    color: $dark;
+    margin-bottom: 7rem;
+    padding-top: 7rem;
+
+    @media (min-width: 790px) {
+        padding-top: 10rem;
+    }
+
+    &-container-table {
+        margin-top: 7rem;
+    }
+
+    .greeting-container {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        @media (min-width: 300px) and (max-width: 690px) {
+            flex-direction: column;
+        }
+    }
+
+    &-description {
+        padding: 3.5rem 0 0 0;
+        @media (min-width: 300px) and (max-width: 790px) {
+            padding: 2rem 0;
+        }
+    }
+
+    &-right {
+        margin: 0;
+        @media (min-width: 300px) and (max-width: 690px) {
+            width: 100%;
+        }
+    }
+
+    .article {
+        &-row {
+            display: flex;
+            min-height: 5rem;
+            padding: 0.8rem 1.8rem;
+            &:nth-child(odd) {
+                background: $gray;
+            }
+
+            @media (min-width: 300px) and (max-width: 690px) {
+                flex-direction: column;
+                margin-bottom: 1rem;
+                &:first-child {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+        }
+        &-col {
+            opacity: $opacity;
+            color: $dark;
+            &-head {
+                align-self: center;
+                opacity: 1;
+                color: inherit;
+                text-decoration: none;
+                flex: 1;
+                &:nth-child(1) {
+                    flex: 2rem;
+                }
+                &:nth-child(2) {
+                    flex: 39rem;
+                }
+                &:nth-child(3) {
+                    flex: 47.5rem;
+                }
+                &:nth-child(4) {
+                    flex: 12rem;
+                }
+            }
+            &-number {
+                flex: 2rem;
+                opacity: 1;
+            }
+            &-description {
+                flex: 39rem;
+            }
+            &-subdescription {
+                flex: 47.5rem;
+            }
+            &-links {
+                flex: 12rem;
+                text-decoration: underline;
+                color: $blueColor;
+                opacity: 1;
+            }
+
+            @media (min-width: 300px) and (max-width: 690px) {
+                margin-bottom: 1rem;
+                flex: 1;
+                &-head {
+                    border: none;
+                    flex: auto;
+                    margin-right: 3rem;
+                }
+                &-description {
+                    border-bottom: 1px solid #ccc;
+                }
+                &-subdescription {
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}

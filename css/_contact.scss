@@ -1,0 +1,36 @@
+.contact {
+    position: relative;
+    .map {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+    }
+    &-info {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        background: $white;
+        padding: 3.6rem;
+        @media (min-width: 300px) and (max-width: 690px) {
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 7rem 1rem 1rem 1rem;
+        }
+        span {
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+        a {
+            transition: $transition;
+            &:hover {
+                color: $blueColor;
+            }
+        }
+    }
+
+    &-phone,
+    &-email {
+        text-decoration: underline;
+    }
+}

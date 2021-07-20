@@ -1,0 +1,13 @@
+.about {
+    background: $gray;
+    &-container {
+        text-align: center;
+        color: $blueColor;
+        max-width: 79rem;
+        margin: 0 auto;
+        padding: 7.2rem 0.8rem 9.2rem 0.8rem;
+        @media (min-width: 300px) and (max-width: 690px) {
+            padding: 3rem 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,112 @@
+.greeting {
+    min-height: 100vh;
+    background: $blueColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    color: $white;
+
+    &-container {
+        display: flex;
+        @media (min-width: 300px) and (max-width: 690px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-left {
+        width: 50%;
+        @media (min-width: 300px) and (max-width: 690px) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+    &-right {
+        width: 42rem;
+        margin-left: 5rem;
+        @media (min-width: 300px) and (max-width: 690px) {
+            width: 50%;
+            height: 70%;
+            margin: 0 auto;
+        }
+        @media (min-width: 690px) and (max-width: 790px) {
+            margin: 0 auto;
+        }
+    }
+
+    &-description {
+        opacity: $opacity;
+        padding: 3.4rem 0 0 1.8rem;
+        @media (min-width: 300px) and (max-width: 790px) {
+            padding: 2rem 0;
+        }
+    }
+
+    &-btn {
+        border-radius: $borderRadius;
+        border: 1px solid transparent;
+        transition: $transition;
+        &:hover,
+        &:focus {
+            background: $blueColorOpacity;
+            border: 1px solid $white;
+            color: $white;
+        }
+    }
+    &-advantages {
+        background: $white;
+        color: $dark;
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        // Looking better
+        font-weight: 600;
+        // In design
+        // font-weight: 500;
+        letter-spacing: -0.05em;
+        width: 167px;
+        height: 45px;
+        margin: 2.1rem 3.6rem;
+        @media (min-width: 300px) and (max-width: 790px) {
+            padding: 0.7rem 1.7rem;
+            font-size: 1.6rem;
+            margin: 0;
+        }
+    }
+
+    .svg {
+        &-dialogue1 {
+            animation: fly 1s ease forwards;
+        }
+        &-dialogue2 {
+            animation: fly 2s ease forwards;
+        }
+        &-dialogue3 {
+            animation: fly 1.5s ease forwards;
+        }
+        &-man {
+            animation: fade 1.5s ease forwards;
+        }
+
+        @keyframes fly {
+            from {
+                opacity: 0;
+                transform: translate(0%, 50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+        }
+        @keyframes fade {
+            from {
+                transform: rotateY(90deg);
+            }
+
+            to {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+}
